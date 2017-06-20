@@ -2,7 +2,7 @@ bitcoind-rpc-dash.js
 ===============
 
 [![NPM Package](https://img.shields.io/npm/v/bitcoind-rpc-dash.svg?style=flat-square)](https://www.npmjs.org/package/bitcoind-rpc-dash)
-[![Build Status](https://img.shields.io/travis/dashpay/bitcoind-rpc-dash.svg?branch=master&style=flat-square)](https://travis-ci.org/dashpay/bitcoind-rpc-dash)
+[![Build Status](https://travis-ci.org/agustinkassis/pivxd-rpc.svg?branch=master)](https://travis-ci.org/agustinkassis/pivxd-rpc)
 [![Coverage Status](https://img.shields.io/coveralls/dashpay/bitcoind-rpc-dash.svg?style=flat-square)](https://coveralls.io/r/dashpay/bitcoind-rpc-dash?branch=master)
 
 A client library to connect to Dash Core RPC in JavaScript.
