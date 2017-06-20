@@ -75,7 +75,7 @@ describe('RpcClient', function() {
     var client = new RpcClient({
       user: 'user',
       pass: 'pass',
-      port: 8332,
+      port: 51473,
     });
     client.protocol.should.equal(https);
 
@@ -87,7 +87,7 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       protocol: 'http'
     });
     client.protocol.should.equal(http);
@@ -100,12 +100,12 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: true
     });
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       var res = new FakeResponse();
       var req =  new FakeRequest();
       setImmediate(function(){
@@ -131,12 +131,12 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: false
     });
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       var res = new FakeResponse();
       var req = new FakeRequest();
       setImmediate(function(){
@@ -167,12 +167,12 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: false
     });
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       var res = new FakeResponse();
       var req = new FakeRequest();
       setImmediate(function(){
@@ -204,12 +204,12 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: false
     });
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       var res = new FakeResponse();
       setImmediate(function(){
         res.emit('data', '[{}, {}, {}]');
@@ -243,12 +243,12 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: true
     });
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       var res = new FakeResponse();
       res.statusCode = 401;
       setImmediate(function(){
@@ -273,12 +273,12 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: true
     });
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       var res = new FakeResponse();
       res.statusCode = 403;
       setImmediate(function(){
@@ -303,12 +303,12 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: true
     });
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       var res = new FakeResponse();
       res.statusCode = 500;
       setImmediate(function(){
@@ -334,12 +334,12 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: true
     });
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       var req = new FakeRequest();
       setImmediate(function(){
         req.emit('error', new Error('write EPIPE'));
@@ -368,12 +368,12 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: true
     });
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       var res = new FakeResponse();
       setImmediate(function(){
         res.emit('data', '{}');
@@ -401,12 +401,12 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: true
     });
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       var res = new FakeResponse();
       var req = new FakeRequest();
       setImmediate(function(){
@@ -431,12 +431,12 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: true
     });
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       var res = new FakeResponse();
       setImmediate(function(){
         res.emit('data', 'not a json string');
@@ -450,7 +450,7 @@ describe('RpcClient', function() {
     client.getDifficulty(function(error, parsedBuf) {
       requestStub.restore();
       should.exist(error);
-      error.message.should.equal('Bitcoin JSON-RPC: Error Parsing JSON: Unexpected token o');
+      error.message.should.equal('Bitcoin JSON-RPC: Error Parsing JSON: Unexpected token o in JSON at position 1');
       done();
     });
 
@@ -462,12 +462,12 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: true
     });
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       var res = new FakeResponse();
       setImmediate(function(){
         res.emit('data', '');
@@ -481,7 +481,7 @@ describe('RpcClient', function() {
     client.getDifficulty(function(error, parsedBuf) {
       requestStub.restore();
       should.exist(error);
-      error.message.should.equal('Bitcoin JSON-RPC: Error Parsing JSON: Unexpected end of input');
+      error.message.should.equal('Bitcoin JSON-RPC: Error Parsing JSON: Unexpected end of JSON input');
       done();
     });
 
@@ -493,7 +493,7 @@ describe('RpcClient', function() {
       user: 'user',
       pass: 'pass',
       host: 'localhost',
-      port: 8332,
+      port: 51473,
       rejectUnauthorized: true,
       disableAgent: true
     });
@@ -504,7 +504,7 @@ describe('RpcClient', function() {
 
     var calledPort = false;
 
-    var requestStub = sinon.stub(client.protocol, 'request', function(options, callback){
+    var requestStub = sinon.stub(client.protocol, 'request').callsFake(function(options, callback){
       calledPort = options.port;
       var res = new FakeResponse();
       setImmediate(function(){
