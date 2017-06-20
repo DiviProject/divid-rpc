@@ -1,10 +1,10 @@
 {
-  "name": "bitcoind-rpc-dash",
-  "description": "Bitcoin Client Library to connect to Dash Core via RPC",
+  "name": "pivxd-rpc",
+  "description": "RPC Client Library to connect to Pivx Core",
   "version": "0.7.1",
   "author": {
-    "name": "Stephen Pair",
-    "email": "stephen@bitpay.com"
+    "name": "Agustin Kassis",
+    "email": "agustin@coinmelon.com"
   },
   "contributors": [
     {
@@ -25,12 +25,13 @@
     }
   ],
   "keywords": [
-    "dash",
+    "pivx",
+    "pivxd",
     "rpc"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/snogcel/bitcoind-rpc-dash"
+    "url": "https://github.com/agustinkassis/pivxd-rpc"
   },
   "license": "MIT",
   "main": "lib/index.js",
@@ -39,15 +40,15 @@
     "coverage": "node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- --recursive"
   },
   "devDependencies": {
-    "async": "^0.9.0",
-    "chai": "^1.10.0",
-    "coveralls": "^2.11.2",
-    "istanbul": "^0.3.5",
-    "mocha": "^2.1.0",
-    "sinon": "^1.12.2"
+    "async": "^2.4.1",
+    "chai": "^4.0.2",
+    "coveralls": "^2.13.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.4.2",
+    "sinon": "^2.3.4"
   },
   "bugs": {
-    "url": "https://github.com/snogcel/bitcoind-rpc-dash/issues"
+    "url": "https://github.com/agustinkassis/pivxd-rpc/issues"
   },
-  "homepage": "https://github.com/snogcel/bitcoind-rpc-dash"
+  "homepage": "https://github.com/agustinkassis/pivxd-rpc"
 }
