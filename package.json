@@ -1,7 +1,7 @@
 {
   "name": "pivxd-rpc",
   "description": "RPC Client Library to connect to Pivx Core",
-  "version": "0.7.1",
+  "version": "0.7.3",
   "author": {
     "name": "Agustin Kassis",
     "email": "agustin@coinmelon.com"
@@ -27,7 +27,8 @@
   "keywords": [
     "pivx",
     "pivxd",
-    "rpc"
+    "rpc",
+    "pivcore"
   ],
   "repository": {
     "type": "git",
