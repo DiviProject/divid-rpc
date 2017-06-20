@@ -12,7 +12,7 @@ A client library to connect to Pivx Core RPC in JavaScript.
 pivxd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install bitcoind-rpc-dash
+npm install pivxd-rpc
 ```
 
 ## Examples
