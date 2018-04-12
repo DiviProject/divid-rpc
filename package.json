@@ -1,6 +1,6 @@
 {
-  "name": "pivxd-rpc",
-  "description": "RPC Client Library to connect to Pivx Core",
+  "name": "divid-rpc",
+  "description": "RPC Client Library to connect to Divi Core",
   "version": "0.7.6",
   "author": {
     "name": "Agustin Kassis",
@@ -25,14 +25,14 @@
     }
   ],
   "keywords": [
-    "pivx",
-    "pivxd",
+    "divi",
+    "divid",
     "rpc",
-    "pivcore"
+    "divcore"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/agustinkassis/pivxd-rpc"
+    "url": "https://github.com/divicoin/divid-rpc"
   },
   "license": "MIT",
   "main": "lib/index.js",
@@ -49,7 +49,7 @@
     "sinon": "^2.3.4"
   },
   "bugs": {
-    "url": "https://github.com/agustinkassis/pivxd-rpc/issues"
+    "url": "https://github.com/divid/divid-rpc/issues"
   },
-  "homepage": "https://github.com/agustinkassis/pivxd-rpc"
+  "homepage": "https://github.com/divid/divid-rpc"
 }

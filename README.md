@@ -1,18 +1,18 @@
-pivxd-rpc.js
+divid-rpc.js
 ===============
 
-[![NPM Package](https://img.shields.io/npm/v/pivxd-rpc.svg?style=flat-square)](https://www.npmjs.org/package/pivxd-rpc)
-[![Build Status](https://travis-ci.org/agustinkassis/pivxd-rpc.svg?branch=master)](https://travis-ci.org/agustinkassis/pivxd-rpc)
-[![Coverage Status](https://coveralls.io/repos/github/agustinkassis/pivxd-rpc/badge.svg?branch=master)](https://coveralls.io/github/agustinkassis/pivxd-rpc?branch=master)
+[![NPM Package](https://img.shields.io/npm/v/divid-rpc.svg?style=flat-square)](https://www.npmjs.org/package/divid-rpc)
+[![Build Status](https://travis-ci.org/agustinkassis/divid-rpc.svg?branch=master)](https://travis-ci.org/agustinkassis/divid-rpc)
+[![Coverage Status](https://coveralls.io/repos/github/agustinkassis/divid-rpc/badge.svg?branch=master)](https://coveralls.io/github/agustinkassis/divid-rpc?branch=master)
 
-A client library to connect to Pivx Core RPC in JavaScript.
+A client library to connect to Divi Core RPC in JavaScript.
 
 ## Get Started
 
-pivxd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+divid-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install pivxd-rpc
+npm install divid-rpc
 ```
 
 ## Examples
@@ -20,7 +20,7 @@ npm install pivxd-rpc
 ```javascript
 var run = function() {
   var bitcore = require('bitcore');
-  var RpcClient = require('pivxd-rpc');
+  var RpcClient = require('divid-rpc');
 
   var config = {
     protocol: 'http',
