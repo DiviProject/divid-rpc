@@ -1,7 +1,7 @@
 {
   "name": "divid-rpc",
   "description": "RPC Client Library to connect to Divi Core",
-  "version": "3.0.74",
+  "version": "3.0.47",
   "author": {
     "name": "Agustin Kassis",
     "email": "agustin@coinmelon.com"
