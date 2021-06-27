@@ -1,5 +1,5 @@
 {
-  "name": "divid-rpc",
+  "name": "@gnometech/divid-rpc",
   "description": "RPC Client Library to connect to Divi Core",
   "version": "3.0.84",
   "author": {
