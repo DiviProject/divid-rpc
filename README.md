@@ -11,7 +11,7 @@ A client library to connect to Divi Core RPC in JavaScript.
 divid-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install @gnometech/divid-rpc
+npm install divid-rpc
 ```
 
 ## Examples
@@ -19,7 +19,7 @@ npm install @gnometech/divid-rpc
 ```javascript
 var run = function() {
   var bitcore = require('bitcore')
-  var RpcClient = require('@gnometech/divid-rpc')
+  var RpcClient = require('divid-rpc')
 
   var config = {
     protocol: 'http',

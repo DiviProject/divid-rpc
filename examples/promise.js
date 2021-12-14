@@ -1,4 +1,4 @@
-const RpcClient = require('@gnometech/divid-rpc')
+const RpcClient = require('divid-rpc')
 
 const CFG = require('./config/')
 
