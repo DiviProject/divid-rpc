@@ -1,5 +1,4 @@
-divid-rpc.js
-===============
+# divid-rpc.js
 
 [![NPM Package](https://img.shields.io/npm/v/divid-rpc.svg?style=flat-square)](https://www.npmjs.org/package/divid-rpc)
 [![Build Status](https://travis-ci.org/agustinkassis/divid-rpc.svg?branch=master)](https://travis-ci.org/agustinkassis/divid-rpc)
@@ -19,55 +18,55 @@ npm install divid-rpc
 
 ```javascript
 var run = function() {
-  var bitcore = require('bitcore');
-  var RpcClient = require('divid-rpc');
+  var bitcore = require('bitcore')
+  var RpcClient = require('divid-rpc')
 
   var config = {
     protocol: 'http',
     user: 'user',
     pass: 'pass',
     host: '127.0.0.1',
-    port: '51473',
-  };
+    port: '51473'
+  }
 
-  var rpc = new RpcClient(config);
+  var rpc = new RpcClient(config)
 
-  var txids = [];
+  var txids = []
 
   function showNewTransactions() {
-    rpc.getRawMemPool(function (err, ret) {
+    rpc.getRawMemPool(function(err, ret) {
       if (err) {
-        console.error(err);
-        return setTimeout(showNewTransactions, 10000);
+        console.error(err)
+        return setTimeout(showNewTransactions, 10000)
       }
 
       function batchCall() {
-        ret.result.forEach(function (txid) {
+        ret.result.forEach(function(txid) {
           if (txids.indexOf(txid) === -1) {
-            rpc.getRawTransaction(txid);
+            rpc.getRawTransaction(txid)
           }
-        });
+        })
       }
 
       rpc.batch(batchCall, function(err, rawtxs) {
         if (err) {
-          console.error(err);
-          return setTimeout(showNewTransactions, 10000);
+          console.error(err)
+          return setTimeout(showNewTransactions, 10000)
         }
 
-        rawtxs.map(function (rawtx) {
-          var tx = new bitcore.Transaction(rawtx.result);
-          console.log('\n\n\n' + tx.id + ':', tx.toObject());
-        });
+        rawtxs.map(function(rawtx) {
+          var tx = new bitcore.Transaction(rawtx.result)
+          console.log('\n\n\n' + tx.id + ':', tx.toObject())
+        })
 
-        txids = ret.result;
-        setTimeout(showNewTransactions, 2500);
-      });
-    });
+        txids = ret.result
+        setTimeout(showNewTransactions, 2500)
+      })
+    })
   }
 
-  showNewTransactions();
-};
+  showNewTransactions()
+}
 ```
 
 ## License
